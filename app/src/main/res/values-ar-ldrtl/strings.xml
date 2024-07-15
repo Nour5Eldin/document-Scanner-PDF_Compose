@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">الماسح الضوئي للمستندات</string>
+    <string name="rename_pdf">إعادة تسميه PDF</string>
+    <string name="pdf_name">Pdf إسم</string>
+    <string name="cancel">إلغاء</string>
+    <string name="update">تحديث</string>
+    <string name="title">الاسم: %1$s</string>
+    <string name="size">الحجم:  %1$s</string>
+    <string name="date">التاريخ: %1$s</string>
+    <string name="no_pdf">لا يوجد بي دي اف</string>
+    <!--    <string name="loading">تحميل...</string>-->
+<!--    <string name="title">ألاسم: </string>-->
+<!--    <string name="size">الحجم: </string>-->
+<!--    <string name="date">التاريخ: </string>-->
+</resources>

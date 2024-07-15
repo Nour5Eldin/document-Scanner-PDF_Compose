@@ -24,6 +24,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.noureldin.dscan.R
@@ -59,12 +60,18 @@ fun PdfLayout(pdfEntity: PdfEntity, pdfViewModel: PdfViewModel) {
             Icon(painter = painterResource(id = R.drawable.pdf), contentDescription = null, Modifier.size(40.dp), tint = MaterialTheme.colorScheme.onSurfaceVariant)
             Spacer(modifier = Modifier.width(16.dp))
             Column( modifier = Modifier.weight(1f)) {
-                Text(text = "Title: ${pdfEntity.name}", style = MaterialTheme.typography.bodyLarge
+                Text(text = stringResource(R.string.title, pdfEntity.name), style = MaterialTheme.typography.bodyLarge
                 , maxLines = 1, overflow = TextOverflow.Ellipsis)
                 Spacer(modifier = Modifier.width(4.dp))
-                Text(text = "size: ${pdfEntity.size}", style = MaterialTheme.typography.bodyMedium)
+                Text(text = stringResource(R.string.size, pdfEntity.size), style = MaterialTheme.typography.bodyMedium)
 
-                Text(text = "Date: ${SimpleDateFormat("dd/MMM/yy - HH:mm a", Locale.getDefault()).format(pdfEntity.lastModifiedTime)}", style = MaterialTheme.typography.bodyMedium)
+                Text(text = stringResource(
+                    R.string.date,
+                    SimpleDateFormat(
+                        "dd/MMM/yy - HH:mm a",
+                        Locale.getDefault()
+                    ).format(pdfEntity.lastModifiedTime)
+                ), style = MaterialTheme.typography.bodyMedium)
             }
             IconButton(onClick = {
                 pdfViewModel.currentPdfEntity = pdfEntity

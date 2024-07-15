@@ -1,7 +1,12 @@
 <resources>
-    <string name="app_name">DScan</string>
+    <string name="app_name">DScanner</string>
     <string name="rename_pdf">Rename PDF</string>
     <string name="pdf_name">Pdf Name</string>
     <string name="cancel">Cancel</string>
     <string name="update">Update</string>
+    <string name="title">Title: %1$s</string>
+    <string name="size">size: %1$s</string>
+    <string name="date">Date: %1$s</string>
+    <string name="no_pdf">No Pdf</string>
+
 </resources>

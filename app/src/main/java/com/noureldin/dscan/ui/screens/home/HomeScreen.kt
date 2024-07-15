@@ -136,7 +136,7 @@ fun HomeScreen(pdfViewModel: PdfViewModel) {
         pdfState.DisplayResult(onLoading = {
         }, onSuccess = {pdfList->
             if (pdfList.isEmpty()){
-                ErrorScreen(message = "No Pdf")
+                ErrorScreen(message = stringResource(R.string.no_pdf))
             } else {
                 LazyColumn(
                     modifier = Modifier
